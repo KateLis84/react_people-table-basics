@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Person } from '../../types';
 import { PersonLink } from '../PersonLink/PersonLink';
 
@@ -33,12 +34,12 @@ export const PeopleTable = ({
           }
         >
           <td>
-            <a
-              href={`#/people/${person.slug}`}
+            <Link
+              to={`/people/${person.slug}`}
               className={person.sex === 'f' ? 'has-text-danger' : ''}
             >
               {person.name}
-            </a>
+            </Link>
           </td>
           <td>{person.sex}</td>
           <td>{person.born}</td>

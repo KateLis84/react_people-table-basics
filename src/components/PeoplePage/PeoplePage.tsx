@@ -17,7 +17,7 @@ export const PeoplePage = () => {
     getPeople()
       .then(setPeople)
       .catch(() => setError(true));
-  }, []);
+  }, [slug]);
 
   if (error) {
     return (
